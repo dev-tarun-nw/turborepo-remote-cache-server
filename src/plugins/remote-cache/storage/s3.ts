@@ -18,7 +18,9 @@ export function createS3({
   bucket,
   region = process.env.AWS_REGION || process.env.S3_REGION,
   endpoint,
-  s3OptionsPassthrough = {},
+  s3OptionsPassthrough = {
+    s3ForcePathStyle: true
+  },
 }: S3Options) {
   const client = new aws.S3({
     ...(accessKey && secretKey
@@ -34,7 +36,7 @@ export function createS3({
     ...(endpoint ? { endpoint: new aws.Endpoint(endpoint) } : {}),
     ...(process.env.NODE_ENV === 'test'
       ? { sslEnabled: false, s3ForcePathStyle: true }
-      : {}),
+      : {s3ForcePathStyle: true}),
     ...s3OptionsPassthrough,
   })
 
