@@ -1,3 +1,118 @@
+# [2.5.0](https://github.com/ducktors/turborepo-remote-cache/compare/v2.4.0...v2.5.0) (2025-04-22)
+
+
+### Features
+
+* add SSL support ([cc73331](https://github.com/ducktors/turborepo-remote-cache/commit/cc733310309d6acddc8245102a9c770a269c3fbe))
+* add SSL support ([b78af84](https://github.com/ducktors/turborepo-remote-cache/commit/b78af84d1d47634eaca2bd41dee334a0b3f79815))
+* add SSL support ([ad5409c](https://github.com/ducktors/turborepo-remote-cache/commit/ad5409cc53e7ded8edfd67ea18e98c4ea4c4d2a1))
+
+# [2.4.0](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.9...v2.4.0) (2025-04-22)
+
+
+### Features
+
+* add HTTP/2 support via environment variable ([33e5efb](https://github.com/ducktors/turborepo-remote-cache/commit/33e5efb65b7d5e2fb3b1d93ed683c2af3ebac6fd))
+* add HTTP2 flag to environment configuration and update app initialization ([04a43bc](https://github.com/ducktors/turborepo-remote-cache/commit/04a43bc398b0b17c48ee7271a714db08be4b2ac4))
+
+## [2.3.9](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.8...v2.3.9) (2025-04-18)
+
+
+### Bug Fixes
+
+* **deps:** bump fastify from 5.3.1 to 5.3.2 ([ca2db8a](https://github.com/ducktors/turborepo-remote-cache/commit/ca2db8aaba98f7af2f6dfaeb1e56979080da280a))
+
+## [2.3.8](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.7...v2.3.8) (2025-04-18)
+
+
+### Bug Fixes
+
+* **deps:** bump fastify from 5.1.0 to 5.3.1 ([12b3de9](https://github.com/ducktors/turborepo-remote-cache/commit/12b3de9fcc2c20f4e3d183e4828ff914e4a07d7a))
+
+## [2.3.7](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.6...v2.3.7) (2025-04-14)
+
+
+### Bug Fixes
+
+* S3 - store upload promise early in order to complete createWriteStream ([a81cc85](https://github.com/ducktors/turborepo-remote-cache/commit/a81cc85fd235805ebe00b6da0d132ce4f73ca4f4))
+
+## [2.3.6](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.5...v2.3.6) (2025-04-11)
+
+
+### Bug Fixes
+
+* **deps:** Migrate aws sdk to v3 ([7f33b6a](https://github.com/ducktors/turborepo-remote-cache/commit/7f33b6afd0e623bf0b8d04eeae8eecaef763954b))
+
+## [2.3.5](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.4...v2.3.5) (2025-03-19)
+
+
+### Bug Fixes
+
+* remove expose port from dockerfile ([34e7272](https://github.com/ducktors/turborepo-remote-cache/commit/34e72726284308d3223b1f1d694762144c29799f))
+
+## [2.3.4](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.3...v2.3.4) (2025-03-05)
+
+
+### Bug Fixes
+
+* simplify dockerfile and fix ghr docker image name ([4495504](https://github.com/ducktors/turborepo-remote-cache/commit/44955044efb5ad4bc1c3895e28b554c0d18df693))
+
+## [2.3.3](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.2...v2.3.3) (2025-03-05)
+
+
+### Bug Fixes
+
+* change name of LOG_LEVEL_PROBE ([7e0641c](https://github.com/ducktors/turborepo-remote-cache/commit/7e0641cb48faa5a060ea5571ca02d895c105a2df))
+
+## [2.3.2](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.1...v2.3.2) (2025-03-05)
+
+
+### Bug Fixes
+
+* pnpm audit fix ([4f64569](https://github.com/ducktors/turborepo-remote-cache/commit/4f645694d9ee292849cdab3e1057d54a2c63efce))
+
+## [2.3.1](https://github.com/ducktors/turborepo-remote-cache/compare/v2.3.0...v2.3.1) (2025-02-20)
+
+
+### Bug Fixes
+
+* remove package.json import on status page ([ad63d6e](https://github.com/ducktors/turborepo-remote-cache/commit/ad63d6e057c883b888065139e037a2401186395f))
+
+# [2.3.0](https://github.com/ducktors/turborepo-remote-cache/compare/v2.2.12...v2.3.0) (2025-02-20)
+
+
+### Features
+
+* Add JWT Authentication and Authorization ([4828fed](https://github.com/ducktors/turborepo-remote-cache/commit/4828fed5d4d9a1a8acd1c9be4be1c94b87521219))
+
+## [2.2.12](https://github.com/ducktors/turborepo-remote-cache/compare/v2.2.11...v2.2.12) (2025-02-10)
+
+
+### Bug Fixes
+
+* update aws-sdk to patch GHSA-776f-qx25-q3cc ([96d3d71](https://github.com/ducktors/turborepo-remote-cache/commit/96d3d71a2322b17b130ef5f660e64b976960cc05))
+
+## [2.2.11](https://github.com/ducktors/turborepo-remote-cache/compare/v2.2.10...v2.2.11) (2025-02-08)
+
+
+### Bug Fixes
+
+* Do not allow logger and loggerInstance to simultaneously exist in fastifyOptions ([6c69249](https://github.com/ducktors/turborepo-remote-cache/commit/6c6924997f7b81ef7e4745fdd54572c1331971bc))
+
+## [2.2.10](https://github.com/ducktors/turborepo-remote-cache/compare/v2.2.9...v2.2.10) (2025-02-08)
+
+
+### Bug Fixes
+
+* remove corepack ([a4288f8](https://github.com/ducktors/turborepo-remote-cache/commit/a4288f8cd15cfdfdd07535bff167edd1f37856f6))
+
+## [2.2.9](https://github.com/ducktors/turborepo-remote-cache/compare/v2.2.8...v2.2.9) (2025-02-08)
+
+
+### Bug Fixes
+
+* **deps:** update version of duplexify to 4.1.3 ([cb69b32](https://github.com/ducktors/turborepo-remote-cache/commit/cb69b32fc7786342b139a685fe4dc54d09808c57))
+
 ## [2.2.8](https://github.com/ducktors/turborepo-remote-cache/compare/v2.2.7...v2.2.8) (2024-11-29)
 
 

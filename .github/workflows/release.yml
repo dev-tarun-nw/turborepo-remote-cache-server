@@ -9,6 +9,8 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 env:
   NPM_CONFIG_PROVENANCE: true
+  PNPM_VERSION: 10.9.0
+  NODE_VERSION: 22
 
 permissions:
   contents: read
@@ -24,7 +26,7 @@ jobs:
       id-token: write 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@0080882f6c36860b6ba35c610c98ce87d4e2f26f # v2.10.2
+        uses: step-security/harden-runner@0634a2670c59f64b4a01f0f96f84700a4088b9f0 # v2.12.0
         with:
           egress-policy: audit
 
@@ -32,14 +34,14 @@ jobs:
         name: Checkout
         with:
           persist-credentials: false
-      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         name: Install Node
         with:
-          node-version: 20
+          node-version: ${{ env.NODE_VERSION }}
       - uses: pnpm/action-setup@fe02b34f77f8bc703788d5817da081398fad5dd2 # v4.0.0
         name: Install pnpm
         with:
-          version: 9.14.2
+          version: ${{ env.PNPM_VERSION }}
       - name: Install dependencies
         run: pnpm install
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies

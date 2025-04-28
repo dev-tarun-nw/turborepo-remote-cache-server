@@ -1,7 +1,4 @@
-import { readFileSync } from 'fs'
 import type { Server } from 'http'
-import { dirname, join } from 'path'
-import { fileURLToPath } from 'url'
 import type {
   RawReplyDefaultExpression,
   RawRequestDefaultExpression,
@@ -9,13 +6,6 @@ import type {
 } from 'fastify'
 import { type Params, type Querystring } from './schema.js'
 import { statusRouteSchema } from './status-schema.js'
-
-// Get package.json version
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-const packageJson = JSON.parse(
-  readFileSync(join(__dirname, '../../../../package.json'), 'utf8'),
-)
 
 export const getStatus: RouteOptions<
   Server,
@@ -29,11 +19,15 @@ export const getStatus: RouteOptions<
   method: 'GET',
   url: '/artifacts/status',
   schema: statusRouteSchema,
-  logLevel: 'error',
+  logLevel: process.env.ENABLE_STATUS_LOG === 'true' ? 'info' : 'silent',
+  authorization: 'read',
   async handler(req, reply) {
     reply.send({
       status: 'enabled',
-      version: packageJson.version,
+      version:
+        process.env.PACKAGE_VERSION ??
+        process.env.npm_package_version ??
+        'unknown',
     })
   },
 }

@@ -64,3 +64,7 @@ junit-testresults.xml
 # Misc
 .DS_Store
 build
+.envrc
+
+# Certs, if placed locally for testing
+**/certs
